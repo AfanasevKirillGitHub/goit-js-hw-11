@@ -57,7 +57,8 @@ async function onClickLoadMore() {
 
     if (totalPages <= page) {
       // конец результатов скрыть кнопку, предупредить
-      clearRender();
+      // clearRender();
+      refs.loadMore.classList.add('is-hidden');
       Notiflix.Notify.warning(
         "We're sorry, but you've reached the end of search results."
       );
